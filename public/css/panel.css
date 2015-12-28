@@ -1,0 +1,54 @@
+.p-panel{
+	box-shadow: 0px 0px 3px 0px #aaa;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #459bdc;
+	background-color: #fff;
+}
+.p-panel .p-wrapper{
+	position: relative;
+	display: block;
+}
+.p-panel .p-wrapper .p-panel-des{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	height: 0px;
+	background-color: rgba(0,0,0,0.8);
+	display: block;
+	overflow: hidden;
+}
+.p-panel .p-wrapper:hover .p-panel-des{
+	height: 100%;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+
+}
+.p-panel-des .p-panel-des-i{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	display: inline-block;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 15px;
+}
+.p-panel .p-name{
+	text-align: center;
+	font-size: 22px;
+	margin: 0px;
+	padding: 10px 0px;
+	line-height: 26px;
+	font-weight: 500;
+	font-family: '微软雅黑';
+}
+.p-panel .p-time{
+	text-align: right;
+	padding: 4px 10px;
+	font-size: 13px;
+	color: #aaa;
+	line-height: 20px;
+}

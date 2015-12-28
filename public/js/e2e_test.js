@@ -1,0 +1,89 @@
+angular.module('ng.e2eTest', ["ngMockE2E"])
+.run(["$httpBackend","productions","homePic",function($httpBackend,productions,homePic){
+	var rows = [{
+		title:"h",
+		url:"",
+		describe:"this is a test of walterfall project,this is a technology use directives to build the system!"
+	},{
+		title:"h",
+		url:"",
+		describe:"this is "
+	},{
+		title:"h",
+		url:"",
+		describe:"this is a test of walterfall project,this is a technology use "
+	},{
+		title:"h",
+		url:"",
+		describe:"this is a test of walterfall project,this is!"
+	}];
+	$httpBackend.whenGET(/template\//).passThrough();
+	$httpBackend.whenGET("/production").respond(JSON.stringify(productions));
+	$httpBackend.whenPOST("/login");
+	$httpBackend.whenGET("/home_pic").respond(homePic)
+}])
+.value('productions',{
+	results:[{
+		name:"react-ui",
+		img:"public/images/production/09.png",
+		href:"framework/react-ui/docs/src/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	},
+	{
+		name:"es6",
+		img:"public/images/production/15.png",
+		href:"framework/es6tutorial/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	},
+	{
+		name:"es6",
+		img:"public/images/production/15.png",
+		href:"framework/es6tutorial/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	},
+	{
+		name:"es6",
+		img:"public/images/production/09.png",
+		href:"framework/es6tutorial/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	},
+	{
+		name:"es6",
+		img:"public/images/production/15.png",
+		href:"framework/es6tutorial/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	},
+	{
+		name:"es6",
+		img:"public/images/production/09.png",
+		href:"framework/es6tutorial/index.html",
+		des:'这里是一些说明',
+		time:1450840666394,
+	}]
+})
+.value('homePic',{
+	results :[{
+		url:"public/images/home/gall_1.jpg",
+		des:"2015"
+	},{
+		url:"public/images/home/gall_2.jpg",
+		des:"2015"
+	},{
+		url:"public/images/home/gall_3.jpg",
+		des:"2015"
+	},{
+		url:"public/images/home/gall_4.jpg",
+		des:"2015"
+	},{
+		url:"public/images/home/gall_5.jpg",
+		des:"2015"
+	},{
+		url:"public/images/home/gall_6.jpg",
+		des:"2015"
+	}]
+})

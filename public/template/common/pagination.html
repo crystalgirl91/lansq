@@ -1,0 +1,9 @@
+<section class="pagination">
+	<ul class='clearfix'>
+		<li class="pagination-item pagination-begin" ng-click="goToBegin()" ng-class="{'disabled':curIdx===1}"></li>
+		<li class="pagination-item pagination-prev" ng-click="goToPrev()" ng-class="{'disabled':curIdx===1}"></li>
+		<li class="pagination-item" ng-class="{'on':page==curIdx}" ng-click="chagePageIdx(page)" ng-repeat="page in pages track by $index">{{page}}</li>
+		<li class="pagination-item pagination-next" ng-click="goToNext()" ng-class="{'disabled':curIdx==allLen}"></li>
+		<li class="pagination-item pagination-end" ng-click="goToEnd()" ng-class="{'disabled':curIdx==allLen}"></li>
+	</ul>
+</section>

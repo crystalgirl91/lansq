@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	
+</head>
+<body>
+	<header ng-include="'public/template/common/header.html'"></header>
+	<main class="main" ng-view></main>
+	<footer class="footer" id="footer" ng-include="'public/template/common/footer.html'"></footer>
+
+	<!--<script src="http://cdn.bootcss.com/less.js/2.5.3/less.js"></script>-->
+	<script src='bower_components/jquery/dist/jquery.js'></script>
+	<script src='bower_components/angular/angular.js'></script>
+	<script src='bower_components/angular-resource/angular-resource.js'></script>
+	<script src='bower_components/angular-route/angular-route.js'></script>
+	<script src='bower_components/angular-mocks/angular-mocks.js'></script>
+	<script src='public/js/e2e_test.js'></script>
+
+	<script src='public/js/entry.js'></script>
+	<script src='public/js/home.js'></script>
+	<script src='public/js/production.js'></script>
+	<script src='public/js/directive.js'></script>
+
+</body>
+</html>

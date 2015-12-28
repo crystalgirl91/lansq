@@ -1,0 +1,20 @@
+<section id="content">
+	<h2 class="ta__center"></h2>
+	<div class="container">
+		<div class="panelWall row">	
+			<section class="p-panel grid_4" ng-repeat="row in rows track by $index">
+				<a class="p-wrapper" href={{row.href}}>
+					<img class="p-panel-img" ng-src={{row.img}} alt="">
+					<span class="p-panel-des">
+						<span class="p-panel-des-i">{{row.des}}</span>
+					</span>
+				</a>
+				<h3 class="p-name">{{row.name}}</h3>
+				<div class="p-time">
+					<time>{{row.time | date:'yyyy-MM-dd'}}</time>
+				</div>
+			</section>
+		</div>
+		<pagination data-change-page='changePage' data-cur-idx="4" all-len="10" max-num="6" style="center"></pagination>
+	</div>
+</section>
